@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #102c6b, #02040a 70%);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 100%;
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(2, 4, 10, 0.75);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  color: white;
+}
+
+.logo span {
+  color: #00eaff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #dbeafe;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 130px 8% 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.tagline {
+  color: #00eaff;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  color: #00eaff;
+  text-shadow: 0 0 25px #00eaff;
+}
+
+.description {
+  color: #c7d2fe;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 34px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 35px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #00eaff;
+  color: #02040a;
+  box-shadow: 0 0 25px #00eaff;
+}
+
+.secondary {
+  border: 2px solid #00eaff;
+  color: #00eaff;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.cyborg-card {
+  width: 380px;
+  height: 420px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 45px rgba(0, 234, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 3s infinite ease-in-out;
+}
+
+.cyborg-head {
+  width: 230px;
+  height: 270px;
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border: 4px solid #00eaff;
+  border-radius: 45% 45% 32% 32%;
+  position: relative;
+  box-shadow: inset 0 0 25px #00eaff;
+}
+
+.antenna {
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  background: #00eaff;
+  left: 50%;
+  top: -70px;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+.eye {
+  position: absolute;
+  top: 95px;
+  width: 48px;
+  height: 22px;
+  background: #00eaff;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #00eaff;
+}
+
+.left {
+  left: 42px;
+}
+
+.right {
+  right: 42px;
+}
+
+.mouth {
+  position: absolute;
+  width: 110px;
+  height: 8px;
+  background: #00eaff;
+  bottom: 65px;
+  left: 58px;
+  box-shadow: 0 0 18px #00eaff;
+}
+
+.features,
+.tech,
+.contact {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.features h2,
+.tech h2,
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 35px;
+  color: #00eaff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 35px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.4);
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: #00eaff;
+}
+
+.feature-card p,
+.tech p,
+.contact p {
+  color: #c7d2fe;
+  line-height: 1.6;
+}
+
+.contact p {
+  margin-bottom: 30px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cyborg-card {
+    width: 300px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 8%;
+    background: #02040a;
+    flex-direction: column;
+    width: 220px;
+    padding: 25px;
+    border-radius: 18px;
+    display: none;
+    border: 1px solid #00eaff;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
